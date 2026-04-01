@@ -4,6 +4,10 @@ import { useState } from 'react'
 
 const faqs = [
   {
+    q: '¿BeFlow es solo para ISPs?',
+    a: 'BeFlow es una empresa de tecnología. BeFlow Net es nuestro primer producto, diseñado específicamente para proveedores de internet. Estamos trabajando en soluciones para otras industrias que anunciaremos próximamente.',
+  },
+  {
     q: '¿Puedo migrar mis datos desde WispHub, Splynx o AppSheet?',
     a: 'Sí. Aceptamos importación desde cualquier fuente que exporte a Excel o CSV. Nuestro equipo te acompaña en el proceso de migración para asegurar que toda tu información (clientes, servicios, cobros, pagos) se transfiera correctamente.',
   },
@@ -21,7 +25,7 @@ const faqs = [
   },
   {
     q: '¿Hay un período de prueba?',
-    a: 'Sí. Ofrecemos una prueba guiada donde configuramos tu ISP con datos reales para que puedas evaluar la plataforma antes de comprometerte. Agenda una demo y te mostramos todo el potencial de BeFlow con tu propia información.',
+    a: 'Sí. Ofrecemos una prueba guiada donde configuramos tu operación con datos reales para que puedas evaluar la plataforma antes de comprometerte. Agenda una demo y te mostramos todo el potencial de BeFlow con tu propia información.',
   },
   {
     q: '¿Es más barato que Splynx o WispHub?',

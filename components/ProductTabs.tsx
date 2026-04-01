@@ -29,11 +29,11 @@ export function ProductTabs() {
       <div className="container">
         <div className="products-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 48 }}>
           <div className="section-eyebrow">
-            <span className="eyebrow-icon">◆</span> Ecosistema
+            <span className="eyebrow-icon">◆</span> Productos
           </div>
-          <h2 className="section-title">Un ecosistema completo<br/>para tu operación ISP</h2>
+          <h2 className="section-title">BeFlow Net: nuestro<br/>producto estrella</h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            Cuatro productos que trabajan juntos para cubrir cada aspecto de tu proveedor de internet.
+            La plataforma todo-en-uno para proveedores de internet. Cuatro módulos que trabajan juntos para cubrir cada aspecto de tu operación ISP.
           </p>
         </div>
 
