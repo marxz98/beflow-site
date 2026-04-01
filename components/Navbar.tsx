@@ -15,8 +15,7 @@ export function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#" className="nav-logo">
-          <div className="logo-icon">B</div>
-          BeFlow
+          <img src="/beflow-logo.png" alt="BeFlow" />
         </a>
         <div className="nav-links hide-mobile">
           <a href="#productos">Productos</a>

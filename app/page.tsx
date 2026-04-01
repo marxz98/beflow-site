@@ -148,7 +148,7 @@ export default function Home() {
               <div className="step-visual">
                 <div className="sv-card-stack">
                   {[
-                    { icon: '📊', bg: '#DBEAFE', color: '#2563EB', title: 'clientes_speednet.xlsx', sub: '1,847 registros · 12 columnas', status: 'Listo', sc: 'green' },
+                    { icon: '📊', bg: '#FFE5E5', color: '#FF3131', title: 'clientes_speednet.xlsx', sub: '1,847 registros · 12 columnas', status: 'Listo', sc: 'green' },
                     { icon: '📋', bg: '#D1FAE5', color: '#059669', title: 'planes_servicio.xlsx', sub: '8 planes · FTTH y wireless', status: 'Listo', sc: 'green' },
                     { icon: '🗺️', bg: '#FEF3C7', color: '#D97706', title: 'zonas_cobertura.xlsx', sub: '5 zonas · Col. María Auxiliadora', status: 'Procesando', sc: 'blue' },
                   ].map((card) => (
@@ -201,8 +201,8 @@ export default function Home() {
                 <div className="sv-card-stack">
                   {[
                     { icon: '✓', bg: '#D1FAE5', color: '#059669', title: 'Cobros generados automáticamente', sub: '1,847 cobros · Abril 2026', status: 'Completado', sc: 'green' },
-                    { icon: '📱', bg: '#DBEAFE', color: '#2563EB', title: 'WhatsApp masivo enviado', sub: 'Recordatorio de pago · 1,200 mensajes', status: 'En proceso', sc: 'blue' },
-                    { icon: '⚡', bg: '#EDE9FE', color: '#7C3AED', title: '3 instalaciones asignadas', sub: 'Técnico: Carlos Mejía · Zona Norte', status: 'Pendiente', sc: 'orange' },
+                    { icon: '📱', bg: '#FFE5E5', color: '#FF3131', title: 'WhatsApp masivo enviado', sub: 'Recordatorio de pago · 1,200 mensajes', status: 'En proceso', sc: 'blue' },
+                    { icon: '⚡', bg: '#FFF0E5', color: '#FF914D', title: '3 instalaciones asignadas', sub: 'Técnico: Carlos Mejía · Zona Norte', status: 'Pendiente', sc: 'orange' },
                   ].map((card) => (
                     <div key={card.title} className="sv-mini-card">
                       <div className="sv-mc-icon" style={{ background: card.bg, color: card.color }}>{card.icon}</div>
@@ -342,8 +342,7 @@ export default function Home() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="footer-logo">
-                <div className="logo-icon">B</div>
-                BeFlow
+                <img src="/beflow-logo.png" alt="BeFlow" />
               </div>
               <p>BeFlow es una empresa de tecnología hondureña que desarrolla software especializado para industrias que lo necesitan.</p>
             </div>
