@@ -2,6 +2,7 @@ import { Navbar } from '@/components/Navbar'
 import { ProductTabs } from '@/components/ProductTabs'
 import { FAQ } from '@/components/FAQ'
 import { ScrollAnimator } from '@/components/ScrollAnimator'
+import { IconDocument, IconClipboard, IconMapPin, IconCheck, IconChat, IconBolt, IconArrowRight, IconTarget } from '@/components/Icons'
 
 const Arrow = () => (
   <svg className="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -128,7 +129,7 @@ export default function Home() {
       <section className="steps-section" id="como-funciona">
         <div className="container">
           <div className="steps-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 72 }}>
-            <div className="section-eyebrow"><span className="eyebrow-icon">→</span> Proceso</div>
+            <div className="section-eyebrow"><span className="eyebrow-icon"><IconArrowRight /></span> Proceso</div>
             <h2 className="section-title">Empieza a operar en<br />menos de una semana</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               Migrar tu ISP a BeFlow Net es un proceso guiado paso a paso. Te acompañamos desde la importación de datos hasta la operación completa.
@@ -148,9 +149,9 @@ export default function Home() {
               <div className="step-visual">
                 <div className="sv-card-stack">
                   {[
-                    { icon: '📊', bg: '#FFE5E5', color: '#FF3131', title: 'clientes_speednet.xlsx', sub: '1,847 registros · 12 columnas', status: 'Listo', sc: 'green' },
-                    { icon: '📋', bg: '#D1FAE5', color: '#059669', title: 'planes_servicio.xlsx', sub: '8 planes · FTTH y wireless', status: 'Listo', sc: 'green' },
-                    { icon: '🗺️', bg: '#FEF3C7', color: '#D97706', title: 'zonas_cobertura.xlsx', sub: '5 zonas · Col. María Auxiliadora', status: 'Procesando', sc: 'blue' },
+                    { icon: <IconDocument />, bg: '#FFE5E5', color: '#FF3131', title: 'clientes_speednet.xlsx', sub: '1,847 registros · 12 columnas', status: 'Listo', sc: 'green' },
+                    { icon: <IconClipboard />, bg: '#D1FAE5', color: '#059669', title: 'planes_servicio.xlsx', sub: '8 planes · FTTH y wireless', status: 'Listo', sc: 'green' },
+                    { icon: <IconMapPin />, bg: '#FEF3C7', color: '#D97706', title: 'zonas_cobertura.xlsx', sub: '5 zonas · Col. María Auxiliadora', status: 'Procesando', sc: 'blue' },
                   ].map((card) => (
                     <div key={card.title} className="sv-mini-card">
                       <div className="sv-mc-icon" style={{ background: card.bg, color: card.color }}>{card.icon}</div>
@@ -200,9 +201,9 @@ export default function Home() {
               <div className="step-visual">
                 <div className="sv-card-stack">
                   {[
-                    { icon: '✓', bg: '#D1FAE5', color: '#059669', title: 'Cobros generados automáticamente', sub: '1,847 cobros · Abril 2026', status: 'Completado', sc: 'green' },
-                    { icon: '📱', bg: '#FFE5E5', color: '#FF3131', title: 'WhatsApp masivo enviado', sub: 'Recordatorio de pago · 1,200 mensajes', status: 'En proceso', sc: 'blue' },
-                    { icon: '⚡', bg: '#FFF0E5', color: '#FF914D', title: '3 instalaciones asignadas', sub: 'Técnico: Carlos Mejía · Zona Norte', status: 'Pendiente', sc: 'orange' },
+                    { icon: <IconCheck />, bg: '#D1FAE5', color: '#059669', title: 'Cobros generados automáticamente', sub: '1,847 cobros · Abril 2026', status: 'Completado', sc: 'green' },
+                    { icon: <IconChat />, bg: '#FFE5E5', color: '#FF3131', title: 'WhatsApp masivo enviado', sub: 'Recordatorio de pago · 1,200 mensajes', status: 'En proceso', sc: 'blue' },
+                    { icon: <IconBolt />, bg: '#FFF0E5', color: '#FF914D', title: '3 instalaciones asignadas', sub: 'Técnico: Carlos Mejía · Zona Norte', status: 'Pendiente', sc: 'orange' },
                   ].map((card) => (
                     <div key={card.title} className="sv-mini-card">
                       <div className="sv-mc-icon" style={{ background: card.bg, color: card.color }}>{card.icon}</div>
@@ -243,7 +244,7 @@ export default function Home() {
       <section className="pricing-section" id="precios">
         <div className="container">
           <div className="pricing-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 56 }}>
-            <div className="section-eyebrow"><span className="eyebrow-icon">◎</span> Precios de BeFlow Net</div>
+            <div className="section-eyebrow"><span className="eyebrow-icon"><IconTarget /></span> Precios de BeFlow Net</div>
             <h2 className="section-title">Precios de BeFlow Net</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               Paga solo por lo que usas. Sin contratos anuales, sin costos ocultos.
@@ -264,7 +265,7 @@ export default function Home() {
               <div className="pricing-features">
                 {['4 usuarios incluidos', 'Gestión de clientes y cobros', 'Mapa de red GIS', '1,000 mensajes WhatsApp/mes', 'Facturación SAR/CAI', 'Soporte por chat'].map((f) => (
                   <div key={f} className="pricing-feature">
-                    <span className="check-icon">✓</span> {f}
+                    <span className="check-icon"><IconCheck /></span> {f}
                   </div>
                 ))}
               </div>
@@ -285,7 +286,7 @@ export default function Home() {
               <div className="pricing-features">
                 {['8 usuarios incluidos', 'Todo de Starter +', 'BeFlow Intelligence (IA)', 'BeFlow Bridge (OLT/MikroTik)', '4,000 mensajes WhatsApp/mes', 'Portal de Clientes', 'Soporte prioritario'].map((f) => (
                   <div key={f} className="pricing-feature">
-                    <span className="check-icon">✓</span> {f}
+                    <span className="check-icon"><IconCheck /></span> {f}
                   </div>
                 ))}
               </div>
@@ -305,7 +306,7 @@ export default function Home() {
               <div className="pricing-features">
                 {['20 usuarios (+$5/extra)', 'Todo de Pro +', '10,000 mensajes WhatsApp/mes', 'API personalizada', 'Onboarding dedicado', 'SLA garantizado', 'Soporte por WhatsApp directo'].map((f) => (
                   <div key={f} className="pricing-feature">
-                    <span className="check-icon">✓</span> {f}
+                    <span className="check-icon"><IconCheck /></span> {f}
                   </div>
                 ))}
               </div>

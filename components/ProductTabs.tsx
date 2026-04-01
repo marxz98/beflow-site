@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { IconCheck, IconUsers, IconCurrency, IconBolt, IconTicket, IconRefresh, IconDiamond } from '@/components/Icons'
 
 const Arrow = () => (
   <svg className="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -9,7 +10,7 @@ const Arrow = () => (
 )
 
 const Check = () => (
-  <div className="pf-check">✓</div>
+  <div className="pf-check"><IconCheck /></div>
 )
 
 type Tab = 'net' | 'intelligence' | 'bridge' | 'portal'
@@ -29,7 +30,7 @@ export function ProductTabs() {
       <div className="container">
         <div className="products-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 48 }}>
           <div className="section-eyebrow">
-            <span className="eyebrow-icon">◆</span> Productos
+            <span className="eyebrow-icon"><IconDiamond /></span> Productos
           </div>
           <h2 className="section-title">BeFlow Net: nuestro<br/>producto estrella</h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
@@ -65,25 +66,25 @@ export function ProductTabs() {
           <div className="product-visual">
             <div className="pv-grid">
               <div className="pv-card">
-                <div className="pv-card-icon" style={{ background: 'rgba(255,49,49,0.15)', color: '#FF6B6B' }}>☷</div>
+                <div className="pv-card-icon" style={{ background: 'rgba(255,49,49,0.15)', color: '#FF6B6B' }}><IconUsers /></div>
                 <div className="pv-card-title">Clientes Activos</div>
                 <div className="pv-card-value">1,847</div>
                 <div className="pv-card-sub">+12% vs mes anterior</div>
               </div>
               <div className="pv-card">
-                <div className="pv-card-icon" style={{ background: 'rgba(16,185,129,0.15)', color: '#34D399' }}>$</div>
+                <div className="pv-card-icon" style={{ background: 'rgba(16,185,129,0.15)', color: '#34D399' }}><IconCurrency /></div>
                 <div className="pv-card-title">Ingresos Mes</div>
                 <div className="pv-card-value">L 842K</div>
                 <div className="pv-card-sub">94.2% tasa de cobro</div>
               </div>
               <div className="pv-card">
-                <div className="pv-card-icon" style={{ background: 'rgba(245,158,11,0.15)', color: '#FBBF24' }}>⚡</div>
+                <div className="pv-card-icon" style={{ background: 'rgba(245,158,11,0.15)', color: '#FBBF24' }}><IconBolt /></div>
                 <div className="pv-card-title">OLTs Activos</div>
                 <div className="pv-card-value">8</div>
                 <div className="pv-card-sub">100% en línea</div>
               </div>
               <div className="pv-card">
-                <div className="pv-card-icon" style={{ background: 'rgba(255,145,77,0.15)', color: '#FFAA6B' }}>◈</div>
+                <div className="pv-card-icon" style={{ background: 'rgba(255,145,77,0.15)', color: '#FFAA6B' }}><IconTicket /></div>
                 <div className="pv-card-title">Órdenes Hoy</div>
                 <div className="pv-card-value">12</div>
                 <div className="pv-card-sub">3 instalaciones nuevas</div>
@@ -113,7 +114,7 @@ export function ProductTabs() {
                 <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)' }}>¿Cuántos clientes están morosos este mes?</div>
               </div>
               <div style={{ background: 'rgba(255,49,49,0.1)', borderRadius: 12, padding: 16, border: '1px solid rgba(255,49,49,0.15)' }}>
-                <div style={{ fontSize: 12, color: 'rgba(255,107,107,0.7)', marginBottom: 8 }}>⚡ BeFlow Intelligence</div>
+                <div style={{ fontSize: 12, color: 'rgba(255,107,107,0.7)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 4 }}><IconBolt /> BeFlow Intelligence</div>
                 <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>
                   Actualmente tienes <strong style={{ color: '#FBBF24' }}>127 clientes</strong> con pagos pendientes de más de 15 días, representando <strong style={{ color: '#FBBF24' }}>L 89,400</strong> en cobros por recuperar. Te recomiendo enviar recordatorios vía WhatsApp.
                 </div>
@@ -154,7 +155,7 @@ export function ProductTabs() {
               ))}
               <div style={{ marginTop: 8, padding: '12px 16px', background: 'rgba(255,49,49,0.08)', borderRadius: 10, border: '1px solid rgba(255,49,49,0.12)' }}>
                 <div style={{ fontSize: 11, color: 'rgba(255,107,107,0.6)', marginBottom: 4 }}>Última acción automática</div>
-                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)' }}>🔄 Reconexión automática: Cliente #1284 — pago confirmado vía PixelPay</div>
+                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', display: 'flex', alignItems: 'center', gap: 6 }}><IconRefresh /> Reconexión automática: Cliente #1284 — pago confirmado vía PixelPay</div>
               </div>
             </div>
             <div className="pv-decoration" style={{ background: 'rgba(16,185,129,0.1)' }} />

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { IconQuestion } from '@/components/Icons'
 
 const faqs = [
   {
@@ -40,7 +41,7 @@ export function FAQ() {
     <section className="faq-section" id="faq">
       <div className="container">
         <div className="faq-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 56 }}>
-          <div className="section-eyebrow"><span className="eyebrow-icon">?</span> FAQ</div>
+          <div className="section-eyebrow"><span className="eyebrow-icon"><IconQuestion /></span> FAQ</div>
           <h2 className="section-title">Preguntas frecuentes</h2>
         </div>
         <div className="faq-grid">
