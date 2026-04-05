@@ -16,20 +16,20 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'BeFlow — La Plataforma Inteligente para ISPs',
+  title: 'BeFlow Net — La Plataforma Inteligente para ISPs',
   description: 'Gestiona clientes, cobros, red de fibra, OLTs y más. Todo en una sola plataforma diseñada para proveedores de internet en Honduras y Centroamérica.',
   keywords: ['ISP', 'gestión ISP', 'Honduras', 'fibra óptica', 'OLT', 'MikroTik', 'proveedor internet'],
   openGraph: {
-    title: 'BeFlow — La Plataforma Inteligente para ISPs',
+    title: 'BeFlow Net — La Plataforma Inteligente para ISPs',
     description: 'Gestiona clientes, cobros, red de fibra, OLTs y más. Diseñada para ISPs en Centroamérica.',
     url: 'https://justbeflow.com',
-    siteName: 'BeFlow',
+    siteName: 'BeFlow Net',
     locale: 'es_HN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BeFlow — La Plataforma Inteligente para ISPs',
+    title: 'BeFlow Net — La Plataforma Inteligente para ISPs',
     description: 'Gestiona clientes, cobros, red de fibra, OLTs y más.',
   },
 }

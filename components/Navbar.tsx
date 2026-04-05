@@ -15,10 +15,10 @@ export function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#" className="nav-logo">
-          <img src="/beflow-logo.png" alt="BeFlow" />
+          <img src="/logos/3.png" alt="BeFlow Net" style={{ height: 32 }} />
         </a>
         <div className="nav-links hide-mobile">
-          <a href="#productos">Productos</a>
+          <a href="#productos">Módulos</a>
           <a href="#como-funciona">Cómo Funciona</a>
           <a href="#precios">Precios</a>
           <a href="#faq">FAQ</a>

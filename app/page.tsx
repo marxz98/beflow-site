@@ -34,20 +34,19 @@ export default function Home() {
         <div className="container">
           <div className="hero-badge">
             <span className="badge-dot" />
-            Empresa de tecnología · Honduras
+            Plataforma en producción · Honduras y Centroamérica
           </div>
           <h1>
-            Software especializado,<br />
-            <span className="gradient-text">hecho en Centroamérica</span>
+            Gestiona tu ISP con<br />
+            <span className="gradient-text">inteligencia total</span>
           </h1>
           <p className="hero-sub">
-            BeFlow crea productos de tecnología que resuelven problemas reales.
-            Nuestro primer producto, BeFlow Net, es la plataforma más completa para
-            proveedores de internet en Honduras y Centroamérica.
+            Clientes, cobros, red de fibra, OLTs y más — todo en una sola plataforma
+            diseñada específicamente para proveedores de internet en Centroamérica.
           </p>
           <div className="hero-ctas">
             <a href="#productos" className="btn btn-accent btn-accent-lg">
-              Conocer BeFlow Net <Arrow />
+              Solicitar Demo <Arrow />
             </a>
             <a href="#como-funciona" className="btn btn-outline" style={{ padding: '14px 32px', fontSize: '15.5px', borderRadius: 12 }}>
               Ver Cómo Funciona
@@ -106,7 +105,7 @@ export default function Home() {
 
       {/* ═══════════ LOGO MARQUEE ═══════════ */}
       <section className="marquee-section">
-        <div className="marquee-label">Tecnologías con las que trabajamos</div>
+        <div className="marquee-label">Integraciones y compatibilidad nativa</div>
         <div className="marquee-track">
           <div className="marquee-inner">
             {/* Double the items for seamless loop */}
@@ -130,7 +129,7 @@ export default function Home() {
         <div className="container">
           <div className="steps-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 72 }}>
             <div className="section-eyebrow"><span className="eyebrow-icon"><IconArrowRight /></span> Proceso</div>
-            <h2 className="section-title">Empieza a operar en<br />menos de una semana</h2>
+            <h2 className="section-title">Migrar tu ISP a BeFlow Net</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               Migrar tu ISP a BeFlow Net es un proceso guiado paso a paso. Te acompañamos desde la importación de datos hasta la operación completa.
             </p>
@@ -226,10 +225,10 @@ export default function Home() {
         <div className="container">
           <div className="metrics-grid">
             {[
-              { value: '22+', label: 'Diferenciadores tecnológicos únicos' },
-              { value: '70%', label: 'Menos costo vs alternativas globales' },
-              { value: '2026', label: 'Fundada en Honduras' },
-              { value: '100%', label: 'Infraestructura cloud' },
+              { value: '22+', label: 'Módulos integrados vs herramientas separadas' },
+              { value: '70%', label: 'Menos costo que Splynx o WispHub' },
+              { value: '5 min', label: 'Para importar tu base de clientes' },
+              { value: '24/7', label: 'Monitoreo automático de tu red' },
             ].map((m) => (
               <div key={m.value} className="metric animate-on-scroll">
                 <div className="metric-value">{m.value}</div>
@@ -244,8 +243,8 @@ export default function Home() {
       <section className="pricing-section" id="precios">
         <div className="container">
           <div className="pricing-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 56 }}>
-            <div className="section-eyebrow"><span className="eyebrow-icon"><IconTarget /></span> Precios de BeFlow Net</div>
-            <h2 className="section-title">Precios de BeFlow Net</h2>
+            <div className="section-eyebrow"><span className="eyebrow-icon"><IconTarget /></span> Precios</div>
+            <h2 className="section-title">Precios que escalan con tu crecimiento</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               Paga solo por lo que usas. Sin contratos anuales, sin costos ocultos.
             </p>
@@ -323,11 +322,11 @@ export default function Home() {
       <section className="cta-section">
         <div className="container">
           <div className="cta-card animate-on-scroll">
-            <h2>Tecnología con propósito,<br />hecha en Honduras</h2>
-            <p>Empezá con BeFlow Net y descubrí lo que la tecnología correcta puede hacer por tu operación.</p>
+            <h2>Tu ISP merece una plataforma<br />que entienda Centroamérica</h2>
+            <p>Únete a los proveedores de internet que están modernizando su operación con BeFlow Net.</p>
             <div className="cta-btns">
               <a href="#productos" className="btn btn-accent btn-accent-lg">
-                Conocer BeFlow Net <Arrow />
+                Solicitar Demo <Arrow />
               </a>
               <a href="#precios" className="btn" style={{ color: 'rgba(255,255,255,0.6)', border: '1.5px solid rgba(255,255,255,0.15)', padding: '14px 32px', borderRadius: 12, fontSize: '15.5px' }}>
                 Ver Precios
@@ -343,13 +342,13 @@ export default function Home() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="footer-logo">
-                <img src="/beflow-logo.png" alt="BeFlow" />
+                <img src="/logos/4.png" alt="BeFlow Net" style={{ height: 28 }} />
               </div>
-              <p>BeFlow es una empresa de tecnología hondureña que desarrolla software especializado para industrias que lo necesitan.</p>
+              <p>BeFlow Net es la plataforma todo-en-uno para proveedores de internet en Honduras y Centroamérica.</p>
             </div>
             <div className="footer-col">
-              <h4>Productos</h4>
-              <a href="#">BeFlow Net</a>
+              <h4>Módulos</h4>
+              <a href="#">Gestión ISP</a>
               <a href="#">Intelligence</a>
               <a href="#">Bridge</a>
               <a href="#">Portal de Clientes</a>
@@ -362,20 +361,23 @@ export default function Home() {
               <a href="#">Estado del Sistema</a>
             </div>
             <div className="footer-col">
-              <h4>Empresa</h4>
-              <a href="#">Sobre Nosotros</a>
-              <a href="#">Contacto</a>
+              <h4>Contacto</h4>
+              <a href="#">Solicitar Demo</a>
+              <a href="#">Soporte</a>
               <a href="#">Política de Privacidad</a>
               <a href="#">Términos de Uso</a>
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2026 BeFlow. Todos los derechos reservados.</span>
+            <span>© 2026 BeFlow Net. Todos los derechos reservados.</span>
             <div className="footer-socials">
               <a href="#" className="footer-social" title="WhatsApp">W</a>
               <a href="#" className="footer-social" title="LinkedIn">in</a>
               <a href="#" className="footer-social" title="Instagram">ig</a>
             </div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 16, paddingTop: 16, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)' }}>BeFlow Net es un producto de BeFlow · justbeflow.com</span>
           </div>
         </div>
       </footer>

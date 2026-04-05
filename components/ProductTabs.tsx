@@ -30,11 +30,11 @@ export function ProductTabs() {
       <div className="container">
         <div className="products-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 48 }}>
           <div className="section-eyebrow">
-            <span className="eyebrow-icon"><IconDiamond /></span> Productos
+            <span className="eyebrow-icon"><IconDiamond /></span> Módulos
           </div>
-          <h2 className="section-title">BeFlow Net: nuestro<br/>producto estrella</h2>
+          <h2 className="section-title">Todo lo que tu ISP necesita,<br/>en un solo lugar</h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            La plataforma todo-en-uno para proveedores de internet. Cuatro módulos que trabajan juntos para cubrir cada aspecto de tu operación ISP.
+            BeFlow Net integra gestión comercial, inteligencia artificial, conectividad de red y un portal para tus clientes. Cuatro módulos que trabajan juntos.
           </p>
         </div>
 

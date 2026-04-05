@@ -5,10 +5,6 @@ import { IconQuestion } from '@/components/Icons'
 
 const faqs = [
   {
-    q: '¿BeFlow es solo para ISPs?',
-    a: 'BeFlow es una empresa de tecnología. BeFlow Net es nuestro primer producto, diseñado específicamente para proveedores de internet. Estamos trabajando en soluciones para otras industrias que anunciaremos próximamente.',
-  },
-  {
     q: '¿Puedo migrar mis datos desde WispHub, Splynx o AppSheet?',
     a: 'Sí. Aceptamos importación desde cualquier fuente que exporte a Excel o CSV. Nuestro equipo te acompaña en el proceso de migración para asegurar que toda tu información (clientes, servicios, cobros, pagos) se transfiera correctamente.',
   },
@@ -22,15 +18,15 @@ const faqs = [
   },
   {
     q: '¿Puedo tener mi propio número de WhatsApp para notificaciones?',
-    a: 'Sí. Cada ISP recibe su propio WABA (WhatsApp Business Account) con número dedicado bajo el portfolio de Meta de BeFlow. Tus clientes reciben notificaciones con el nombre y logo de tu ISP, no de BeFlow.',
+    a: 'Sí. Cada ISP recibe su propio WABA (WhatsApp Business Account) con número dedicado. Tus clientes reciben notificaciones con el nombre y logo de tu ISP, no de BeFlow Net.',
   },
   {
     q: '¿Hay un período de prueba?',
-    a: 'Sí. Ofrecemos una prueba guiada donde configuramos tu operación con datos reales para que puedas evaluar la plataforma antes de comprometerte. Agenda una demo y te mostramos todo el potencial de BeFlow con tu propia información.',
+    a: 'Sí. Ofrecemos una prueba guiada donde configuramos tu operación con datos reales para que puedas evaluar la plataforma antes de comprometerte. Agenda una demo y te mostramos todo el potencial de BeFlow Net con tu propia información.',
   },
   {
     q: '¿Es más barato que Splynx o WispHub?',
-    a: 'Significativamente. BeFlow está diseñado para el mercado centroamericano con precios acordes. Un ISP con 2,000 clientes paga ~$400/mes con BeFlow Pro, mientras que soluciones comparables pueden costar 2-3x más sin incluir las integraciones Honduras-específicas que BeFlow ya trae de serie.',
+    a: 'Significativamente. BeFlow Net está diseñado para el mercado centroamericano con precios acordes. Un ISP con 2,000 clientes paga ~$400/mes con el plan Pro, mientras que soluciones comparables pueden costar 2-3x más sin incluir las integraciones Honduras-específicas que BeFlow Net ya trae de serie.',
   },
 ]
 
