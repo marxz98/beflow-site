@@ -51,9 +51,19 @@ export function NetworkMap() {
       {/* Map background via OpenStreetMap iframe with dark filter */}
       <div className="nmap-bg">
         <iframe
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-87.23%2C14.04%2C-87.15%2C14.11&layer=mapnik"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-87.25%2C14.03%2C-87.13%2C14.12&layer=mapnik"
           title="Mapa de Tegucigalpa"
           loading="lazy"
+          style={{
+            position: 'absolute',
+            top: -20,
+            left: -20,
+            width: 'calc(100% + 40px)',
+            height: 'calc(100% + 40px)',
+            border: 'none',
+            filter: 'brightness(0.3) invert(1) contrast(1.5) hue-rotate(200deg) saturate(0.3)',
+            pointerEvents: 'none',
+          }}
         />
       </div>
 

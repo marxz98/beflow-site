@@ -368,12 +368,7 @@ img { max-width: 100%; }
 }
 /* Dark map background */
 .nmap-bg {
-  position: absolute; inset: -20px; z-index: 0; overflow: hidden;
-}
-.nmap-bg iframe {
-  width: calc(100% + 40px); height: calc(100% + 40px); border: none;
-  filter: brightness(0.3) invert(1) contrast(1.5) hue-rotate(200deg) saturate(0.3);
-  pointer-events: none;
+  position: absolute; inset: 0; z-index: 0; overflow: hidden;
 }
 /* Fiber lines */
 .nmap-fibers {
