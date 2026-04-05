@@ -340,9 +340,9 @@ export default function Home() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="footer-logo">
-                <img src="/logos/beflow-logo.png" alt="BeFlow" style={{ height: 28 }} />
+                <img src="/logos/3.png" alt="BeFlow" style={{ height: 28 }} />
               </div>
-              <p>BeFlow Net es la plataforma todo-en-uno para proveedores de internet en Honduras y Centroamérica.</p>
+              <p>BeFlow es una empresa de tecnología hondureña. Su producto principal, BeFlow Net, es la plataforma más completa para proveedores de internet en Centroamérica.</p>
             </div>
             <div className="footer-col">
               <h4>Módulos</h4>
