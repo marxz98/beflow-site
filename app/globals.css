@@ -357,11 +357,16 @@ img { max-width: 100%; }
 .sv-mc-status.orange { background: var(--orange-light); color: var(--orange); }
 
 /* ═══════════════════ GIS NETWORK MAP ═══════════════════ */
-.gis-section { padding: 100px 0; }
+.gis-section {
+  padding: 100px 0; background: #0B1120;
+}
+.gis-section .section-title { color: var(--text-on-dark); }
+.gis-section .section-subtitle { color: rgba(255,255,255,0.5); }
+.gis-section .section-eyebrow { color: var(--accent); }
 .nmap-container {
   position: relative; border-radius: var(--radius); overflow: hidden;
-  aspect-ratio: 2/1; border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  aspect-ratio: 2/1; border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 60px rgba(255,49,49,0.08);
   background: #0B1120;
 }
 /* Dark map background */
