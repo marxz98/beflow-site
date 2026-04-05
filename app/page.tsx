@@ -2,6 +2,7 @@ import { Navbar } from '@/components/Navbar'
 import { ProductTabs } from '@/components/ProductTabs'
 import { FAQ } from '@/components/FAQ'
 import { ScrollAnimator } from '@/components/ScrollAnimator'
+import { NetworkMap } from '@/components/NetworkMap'
 import { IconDocument, IconClipboard, IconMapPin, IconCheck, IconChat, IconBolt, IconArrowRight, IconTarget } from '@/components/Icons'
 
 const Arrow = () => (
@@ -213,68 +214,7 @@ export default function Home() {
               Mapa interactivo con la ubicación de cada NAP, OLT, cliente y tramo de fibra. Todo actualizado en vivo.
             </p>
           </div>
-          <div className="gis-map animate-on-scroll">
-            <svg className="gis-lines" viewBox="0 0 1000 500" preserveAspectRatio="none">
-              <line className="gis-fiber" x1="150" y1="200" x2="400" y2="120" />
-              <line className="gis-fiber" x1="400" y1="120" x2="650" y2="180" />
-              <line className="gis-fiber" x1="650" y1="180" x2="850" y2="280" />
-              <line className="gis-fiber" x1="400" y1="120" x2="300" y2="350" />
-              <line className="gis-fiber" x1="650" y1="180" x2="750" y2="380" />
-              <line className="gis-fiber" x1="150" y1="200" x2="250" y2="400" />
-              <line className="gis-fiber" x1="850" y1="280" x2="900" y2="420" />
-              <line className="gis-fiber gis-fiber-2" x1="400" y1="120" x2="500" y2="300" />
-              <line className="gis-fiber gis-fiber-2" x1="500" y1="300" x2="650" y2="180" />
-            </svg>
-            {/* OLTs */}
-            <div className="gis-point gis-olt" style={{ left: '15%', top: '40%' }}>
-              <div className="gis-ping" />
-              <div className="gis-dot green" />
-              <div className="gis-tooltip gis-tt-1">OLT-01 Huawei · 128 ONTs</div>
-            </div>
-            <div className="gis-point gis-olt" style={{ left: '40%', top: '24%' }}>
-              <div className="gis-ping" />
-              <div className="gis-dot green" />
-              <div className="gis-tooltip gis-tt-2">OLT-02 ZTE · Señal: -22dBm</div>
-            </div>
-            <div className="gis-point gis-olt" style={{ left: '65%', top: '36%' }}>
-              <div className="gis-ping" />
-              <div className="gis-dot orange" />
-              <div className="gis-tooltip gis-tt-3">OLT-03 · 2 alertas activas</div>
-            </div>
-            <div className="gis-point gis-olt" style={{ left: '85%', top: '56%' }}>
-              <div className="gis-ping" />
-              <div className="gis-dot green" />
-              <div className="gis-tooltip gis-tt-1">OLT-04 V-Sol · 64 ONTs</div>
-            </div>
-            {/* NAPs */}
-            <div className="gis-point" style={{ left: '30%', top: '70%' }}>
-              <div className="gis-ping small" />
-              <div className="gis-dot green small" />
-              <div className="gis-tooltip gis-tt-3">NAP-12 · 24 puertos · 18 activos</div>
-            </div>
-            <div className="gis-point" style={{ left: '50%', top: '60%' }}>
-              <div className="gis-ping small" />
-              <div className="gis-dot green small" />
-            </div>
-            <div className="gis-point" style={{ left: '75%', top: '76%' }}>
-              <div className="gis-ping small" />
-              <div className="gis-dot red small" />
-              <div className="gis-tooltip gis-tt-2">NAP-07 · Sin señal · Revisar</div>
-            </div>
-            <div className="gis-point" style={{ left: '25%', top: '80%' }}>
-              <div className="gis-ping small" />
-              <div className="gis-dot green small" />
-            </div>
-            <div className="gis-point" style={{ left: '90%', top: '84%' }}>
-              <div className="gis-ping small" />
-              <div className="gis-dot green small" />
-            </div>
-            <div className="gis-point" style={{ left: '58%', top: '85%' }}>
-              <div className="gis-ping small" />
-              <div className="gis-dot orange small" />
-              <div className="gis-tooltip gis-tt-1">NAP-19 · 16 puertos · 15 activos</div>
-            </div>
-          </div>
+          <NetworkMap />
         </div>
       </section>
 

@@ -280,27 +280,16 @@ img { max-width: 100%; }
   display: flex; flex-direction: column; justify-content: center;
   box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
   border: 1px solid rgba(255,255,255,0.05);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
-.product-visual::after {
-  content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
-  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.04) 45%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 55%, transparent 60%);
-  transition: left 0.6s ease; pointer-events: none; z-index: 2;
-}
-.product-visual:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(255,49,49,0.15);
-  border-color: rgba(255,49,49,0.2);
-}
-.product-visual:hover::after { left: 120%; }
-.product-visual .pv-card,
-.product-visual > div > div {
-  transition: transform 0.35s ease;
-}
-.product-visual:hover .pv-card,
-.product-visual:hover > div > div {
-  transform: translateY(-2px);
-}
+/* Parallax depth layers */
+.pv-depth-1 { transition: transform 0.4s ease; }
+.pv-depth-2 { transition: transform 0.5s ease; }
+.pv-depth-3 { transition: transform 0.6s ease; }
+.pv-decoration { transition: transform 0.8s ease; }
+.product-visual:hover .pv-depth-1 { transform: translateY(-6px); }
+.product-visual:hover .pv-depth-2 { transform: translateY(-4px); }
+.product-visual:hover .pv-depth-3 { transform: translateY(-2px) translateX(2px); }
+.product-visual:hover .pv-decoration { transform: scale(1.1); }
 .pv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .pv-card {
   background: rgba(255,255,255,0.05); border-radius: 10px;
@@ -367,64 +356,97 @@ img { max-width: 100%; }
 .sv-mc-status.blue { background: var(--accent-light); color: var(--accent); }
 .sv-mc-status.orange { background: var(--orange-light); color: var(--orange); }
 
-/* ═══════════════════ GIS MAP ═══════════════════ */
+/* ═══════════════════ GIS NETWORK MAP ═══════════════════ */
 .gis-section { padding: 100px 0; }
-.gis-map {
-  position: relative; background: #0B1120; border-radius: var(--radius);
-  width: 100%; aspect-ratio: 2/1; overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.06);
+.nmap-container {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  aspect-ratio: 2/1; border: 1px solid rgba(255,255,255,0.08);
   box-shadow: var(--shadow-lg), var(--shadow-glow);
+  background: #0B1120;
 }
-.gis-lines {
+/* Dark map background */
+.nmap-bg {
+  position: absolute; inset: 0; z-index: 0;
+}
+.nmap-bg iframe {
+  width: 100%; height: 100%; border: none;
+  filter: brightness(0.3) invert(1) contrast(1.5) hue-rotate(200deg) saturate(0.3);
+  pointer-events: none;
+}
+/* Fiber lines */
+.nmap-fibers {
   position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;
 }
-.gis-fiber {
-  stroke: rgba(16,185,129,0.25); stroke-width: 1.5; fill: none;
-  stroke-dasharray: 8 6; animation: gis-flow 3s linear infinite;
+.nmap-fiber {
+  stroke: rgba(255,49,49,0.25); stroke-width: 0.3; fill: none;
+  stroke-dasharray: 1.5 1; animation: nmap-flow 3s linear infinite;
 }
-.gis-fiber-2 {
-  stroke: rgba(245,158,11,0.2); animation-delay: -1.5s;
+.nmap-fiber-trunk {
+  stroke: rgba(255,145,77,0.2); stroke-width: 0.4;
+  stroke-dasharray: 2 1.5; animation-duration: 4s;
 }
-.gis-point {
-  position: absolute; z-index: 3; transform: translate(-50%, -50%);
+/* Layers */
+.nmap-layer { position: absolute; inset: 0; z-index: 2; }
+.nmap-olts-layer { z-index: 4; transition: transform 0.5s ease; }
+.nmap-naps-layer { z-index: 3; transition: transform 0.6s ease; }
+.nmap-clients-layer { z-index: 2; transition: transform 0.7s ease; }
+.nmap-fibers { transition: transform 0.8s ease; }
+/* Parallax on hover */
+.nmap-container:hover .nmap-olts-layer { transform: translate(-2px, -4px); }
+.nmap-container:hover .nmap-naps-layer { transform: translate(-1px, -2px); }
+.nmap-container:hover .nmap-clients-layer { transform: translate(1px, 1px); }
+.nmap-container:hover .nmap-fibers { transform: translate(0px, 2px); }
+/* Client dots */
+.nmap-client {
+  position: absolute; width: 4px; height: 4px; border-radius: 50%;
+  background: rgba(255,255,255,0.15); transform: translate(-50%, -50%);
 }
-.gis-ping {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 32px; height: 32px; border-radius: 50%;
-  border: 1.5px solid rgba(16,185,129,0.4);
-  animation: gis-ping 2.5s ease-out infinite;
+/* NAP markers */
+.nmap-nap {
+  position: absolute; transform: translate(-50%, -50%);
 }
-.gis-ping.small { width: 22px; height: 22px; }
-.gis-dot {
-  width: 12px; height: 12px; border-radius: 50%;
-  position: relative;
+.nmap-dot-nap {
+  width: 8px; height: 8px; border-radius: 50%;
 }
-.gis-dot.green { background: #10B981; box-shadow: 0 0 10px rgba(16,185,129,0.6); }
-.gis-dot.orange { background: #F59E0B; box-shadow: 0 0 10px rgba(245,158,11,0.6); }
-.gis-dot.red { background: #EF4444; box-shadow: 0 0 10px rgba(239,68,68,0.6); }
-.gis-dot.small { width: 8px; height: 8px; }
-.gis-point:has(.gis-dot.orange) .gis-ping { border-color: rgba(245,158,11,0.4); }
-.gis-point:has(.gis-dot.red) .gis-ping { border-color: rgba(239,68,68,0.4); }
-.gis-tooltip {
-  position: absolute; left: 50%; bottom: calc(100% + 14px);
-  transform: translateX(-50%); white-space: nowrap;
-  background: rgba(17,24,39,0.95); color: rgba(255,255,255,0.85);
-  font-size: 11px; font-weight: 500; padding: 6px 12px;
+.nmap-dot-nap.green { background: #10B981; box-shadow: 0 0 6px rgba(16,185,129,0.5); }
+.nmap-dot-nap.orange { background: #F59E0B; box-shadow: 0 0 6px rgba(245,158,11,0.5); }
+.nmap-nap-tooltip {
+  position: absolute; left: calc(100% + 8px); top: 50%; transform: translateY(-50%);
+  white-space: nowrap; background: rgba(0,0,0,0.85); color: rgba(255,255,255,0.85);
+  font-size: 11px; font-weight: 500; padding: 5px 10px;
   border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);
-  pointer-events: none; opacity: 0;
+  opacity: 0; transition: opacity 0.25s; pointer-events: none;
 }
-.gis-tt-1 { animation: gis-tooltip 6s ease-in-out infinite; }
-.gis-tt-2 { animation: gis-tooltip 6s ease-in-out infinite 2s; }
-.gis-tt-3 { animation: gis-tooltip 6s ease-in-out infinite 4s; }
-@keyframes gis-flow { to { stroke-dashoffset: -28; } }
-@keyframes gis-ping {
-  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.8; }
-  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+.nmap-nap:hover .nmap-nap-tooltip { opacity: 1; }
+/* OLT markers */
+.nmap-olt {
+  position: absolute; transform: translate(-50%, -50%);
 }
-@keyframes gis-tooltip {
-  0%, 20% { opacity: 0; transform: translateX(-50%) translateY(4px); }
-  25%, 55% { opacity: 1; transform: translateX(-50%) translateY(0); }
-  60%, 100% { opacity: 0; transform: translateX(-50%) translateY(4px); }
+.nmap-dot-olt {
+  width: 14px; height: 14px; border-radius: 50%; position: relative;
+}
+.nmap-dot-olt.green { background: #10B981; box-shadow: 0 0 12px rgba(16,185,129,0.6); }
+.nmap-dot-olt.orange { background: #F59E0B; box-shadow: 0 0 12px rgba(245,158,11,0.6); }
+.nmap-olt-ping {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid rgba(16,185,129,0.35);
+  animation: nmap-ping 2.5s ease-out infinite;
+}
+.nmap-olt:has(.nmap-dot-olt.orange) .nmap-olt-ping { border-color: rgba(245,158,11,0.35); }
+.nmap-olt-tooltip {
+  position: absolute; left: calc(100% + 12px); top: 50%; transform: translateY(-50%);
+  white-space: nowrap; background: rgba(0,0,0,0.85);
+  padding: 8px 12px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  pointer-events: none;
+}
+.nmap-tt-id { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.9); }
+.nmap-tt-info { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+@keyframes nmap-flow { to { stroke-dashoffset: -5; } }
+@keyframes nmap-ping {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
 }
 
 /* ═══════════════════ METRICS ═══════════════════ */

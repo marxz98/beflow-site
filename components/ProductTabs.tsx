@@ -65,29 +65,29 @@ export function ProductTabs() {
           </div>
           <div className="product-visual">
             <div className="pv-grid">
-              <div className="pv-card">
+              <div className="pv-card pv-depth-1">
                 <div className="pv-card-icon" style={{ background: 'rgba(255,49,49,0.15)', color: '#FF6B6B' }}><IconUsers /></div>
                 <div className="pv-card-title">Clientes Activos</div>
                 <div className="pv-card-value">1,847</div>
-                <div className="pv-card-sub">+12% vs mes anterior</div>
+                <div className="pv-card-sub pv-depth-3">+12% vs mes anterior</div>
               </div>
-              <div className="pv-card">
+              <div className="pv-card pv-depth-1">
                 <div className="pv-card-icon" style={{ background: 'rgba(16,185,129,0.15)', color: '#34D399' }}><IconCurrency /></div>
                 <div className="pv-card-title">Ingresos Mes</div>
                 <div className="pv-card-value">L 842K</div>
-                <div className="pv-card-sub">94.2% tasa de cobro</div>
+                <div className="pv-card-sub pv-depth-3">94.2% tasa de cobro</div>
               </div>
-              <div className="pv-card">
+              <div className="pv-card pv-depth-2">
                 <div className="pv-card-icon" style={{ background: 'rgba(245,158,11,0.15)', color: '#FBBF24' }}><IconBolt /></div>
                 <div className="pv-card-title">OLTs Activos</div>
                 <div className="pv-card-value">8</div>
-                <div className="pv-card-sub">100% en línea</div>
+                <div className="pv-card-sub pv-depth-3">100% en línea</div>
               </div>
-              <div className="pv-card">
+              <div className="pv-card pv-depth-2">
                 <div className="pv-card-icon" style={{ background: 'rgba(255,145,77,0.15)', color: '#FFAA6B' }}><IconTicket /></div>
                 <div className="pv-card-title">Órdenes Hoy</div>
                 <div className="pv-card-value">12</div>
-                <div className="pv-card-sub">3 instalaciones nuevas</div>
+                <div className="pv-card-sub pv-depth-3">3 instalaciones nuevas</div>
               </div>
             </div>
             <div className="pv-decoration" />
@@ -109,12 +109,12 @@ export function ProductTabs() {
           </div>
           <div className="product-visual" style={{ background: 'linear-gradient(135deg, #0B1120, #1C0B0B)' }}>
             <div style={{ padding: 8 }}>
-              <div style={{ background: 'rgba(255,255,255,0.06)', borderRadius: 12, padding: 16, marginBottom: 12, border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div className="pv-depth-1" style={{ background: 'rgba(255,255,255,0.06)', borderRadius: 12, padding: 16, marginBottom: 12, border: '1px solid rgba(255,255,255,0.08)' }}>
                 <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', marginBottom: 8 }}>Tú</div>
                 <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)' }}>¿Cuántos clientes están morosos este mes?</div>
               </div>
-              <div style={{ background: 'rgba(255,49,49,0.1)', borderRadius: 12, padding: 16, border: '1px solid rgba(255,49,49,0.15)' }}>
-                <div style={{ fontSize: 12, color: 'rgba(255,107,107,0.7)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 4 }}><IconBolt /> BeFlow Intelligence</div>
+              <div className="pv-depth-2" style={{ background: 'rgba(255,49,49,0.1)', borderRadius: 12, padding: 16, border: '1px solid rgba(255,49,49,0.15)' }}>
+                <div className="pv-depth-3" style={{ fontSize: 12, color: 'rgba(255,107,107,0.7)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 4 }}><IconBolt /> BeFlow Intelligence</div>
                 <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>
                   Actualmente tienes <strong style={{ color: '#FBBF24' }}>127 clientes</strong> con pagos pendientes de más de 15 días, representando <strong style={{ color: '#FBBF24' }}>L 89,400</strong> en cobros por recuperar. Te recomiendo enviar recordatorios vía WhatsApp.
                 </div>
@@ -140,20 +140,20 @@ export function ProductTabs() {
           <div className="product-visual" style={{ background: 'linear-gradient(135deg, #0B1120, #042f2e)' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {[
-                { name: 'OLT-01 Huawei MA5608T', sub: '192.168.1.1 · 128 ONTs · Señal OK', status: 'Online', color: '#10B981', bg: 'rgba(16,185,129,0.15)', tc: '#34D399' },
-                { name: 'MikroTik CCR1036', sub: '10.0.0.1 · 847 queues · CPU 23%', status: 'Online', color: '#10B981', bg: 'rgba(16,185,129,0.15)', tc: '#34D399' },
-                { name: 'OLT-02 ZTE C320', sub: '192.168.2.1 · 64 ONTs · 2 alertas', status: 'Warning', color: '#F59E0B', bg: 'rgba(245,158,11,0.15)', tc: '#FBBF24' },
+                { name: 'OLT-01 Huawei MA5608T', sub: '192.168.1.1 · 128 ONTs · Señal OK', status: 'Online', color: '#10B981', bg: 'rgba(16,185,129,0.15)', tc: '#34D399', depth: 'pv-depth-1' },
+                { name: 'MikroTik CCR1036', sub: '10.0.0.1 · 847 queues · CPU 23%', status: 'Online', color: '#10B981', bg: 'rgba(16,185,129,0.15)', tc: '#34D399', depth: 'pv-depth-1' },
+                { name: 'OLT-02 ZTE C320', sub: '192.168.2.1 · 64 ONTs · 2 alertas', status: 'Warning', color: '#F59E0B', bg: 'rgba(245,158,11,0.15)', tc: '#FBBF24', depth: 'pv-depth-2' },
               ].map((item, i) => (
-                <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'center', padding: '14px 16px', background: 'rgba(255,255,255,0.05)', borderRadius: 10, border: '1px solid rgba(255,255,255,0.08)' }}>
+                <div key={i} className={item.depth} style={{ display: 'flex', gap: 12, alignItems: 'center', padding: '14px 16px', background: 'rgba(255,255,255,0.05)', borderRadius: 10, border: '1px solid rgba(255,255,255,0.08)' }}>
                   <div style={{ width: 10, height: 10, borderRadius: '50%', background: item.color, boxShadow: `0 0 8px ${item.color}50` }} />
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)', fontWeight: 600 }}>{item.name}</div>
                     <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>{item.sub}</div>
                   </div>
-                  <div style={{ fontSize: 11, background: item.bg, color: item.tc, padding: '4px 10px', borderRadius: 100, fontWeight: 600 }}>{item.status}</div>
+                  <div className="pv-depth-3" style={{ fontSize: 11, background: item.bg, color: item.tc, padding: '4px 10px', borderRadius: 100, fontWeight: 600 }}>{item.status}</div>
                 </div>
               ))}
-              <div style={{ marginTop: 8, padding: '12px 16px', background: 'rgba(255,49,49,0.08)', borderRadius: 10, border: '1px solid rgba(255,49,49,0.12)' }}>
+              <div className="pv-depth-2" style={{ marginTop: 8, padding: '12px 16px', background: 'rgba(255,49,49,0.08)', borderRadius: 10, border: '1px solid rgba(255,49,49,0.12)' }}>
                 <div style={{ fontSize: 11, color: 'rgba(255,107,107,0.6)', marginBottom: 4 }}>Última acción automática</div>
                 <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', display: 'flex', alignItems: 'center', gap: 6 }}><IconRefresh /> Reconexión automática: Cliente #1284 — pago confirmado vía PixelPay</div>
               </div>
@@ -177,15 +177,15 @@ export function ProductTabs() {
           </div>
           <div className="product-visual" style={{ background: 'linear-gradient(135deg, #F8FAFC, #FFF5F5)', border: '1px solid #E5E7EB' }}>
             <div style={{ textAlign: 'center', padding: 16 }}>
-              <div style={{ width: 56, height: 56, borderRadius: 14, background: 'linear-gradient(135deg,#FF3131,#FF914D)', margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 700, fontSize: 22 }}>S</div>
-              <div style={{ fontSize: 18, fontWeight: 700, color: '#0B1120', marginBottom: 2 }}>SpeedNet</div>
-              <div style={{ fontSize: 13, color: '#9CA3AF', marginBottom: 24 }}>Portal del Cliente</div>
-              <div style={{ background: 'white', borderRadius: 12, padding: 20, textAlign: 'left', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', marginBottom: 12 }}>
+              <div className="pv-depth-1" style={{ width: 56, height: 56, borderRadius: 14, background: 'linear-gradient(135deg,#FF3131,#FF914D)', margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 700, fontSize: 22 }}>S</div>
+              <div className="pv-depth-1" style={{ fontSize: 18, fontWeight: 700, color: '#0B1120', marginBottom: 2 }}>SpeedNet</div>
+              <div className="pv-depth-3" style={{ fontSize: 13, color: '#9CA3AF', marginBottom: 24 }}>Portal del Cliente</div>
+              <div className="pv-depth-2" style={{ background: 'white', borderRadius: 12, padding: 20, textAlign: 'left', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', marginBottom: 12 }}>
                 <div style={{ fontSize: 12, color: '#9CA3AF', marginBottom: 4 }}>Tu próximo pago</div>
                 <div style={{ fontSize: 28, fontWeight: 700, color: '#0B1120' }}>L 599.00</div>
-                <div style={{ fontSize: 12, color: '#10B981', fontWeight: 600 }}>Vence: 15 de Abril</div>
+                <div className="pv-depth-3" style={{ fontSize: 12, color: '#10B981', fontWeight: 600 }}>Vence: 15 de Abril</div>
               </div>
-              <div style={{ background: 'linear-gradient(135deg, #FF3131, #FF914D)', color: 'white', padding: 12, borderRadius: 10, fontSize: 14, fontWeight: 600 }}>Pagar Ahora con PixelPay</div>
+              <div className="pv-depth-2" style={{ background: 'linear-gradient(135deg, #FF3131, #FF914D)', color: 'white', padding: 12, borderRadius: 10, fontSize: 14, fontWeight: 600 }}>Pagar Ahora con PixelPay</div>
             </div>
           </div>
         </div>
