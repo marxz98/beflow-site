@@ -10,34 +10,7 @@ const Arrow = () => (
   </svg>
 )
 
-const WhatsAppIcon = () => (
-  <svg className="marquee-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-)
-
-const MetaIcon = () => (
-  <svg className="marquee-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a4.892 4.892 0 00.703 1.497C1.658 19.038 2.818 19.8 4.16 19.8c.58 0 1.187-.15 1.782-.488.574-.327 1.14-.81 1.664-1.475.9-1.143 1.694-2.774 2.244-4.953l.122-.483.125.474c.548 2.07 1.326 3.636 2.196 4.746.507.647 1.054 1.12 1.612 1.443.583.336 1.176.486 1.746.486 1.342 0 2.502-.762 3.247-1.881a4.892 4.892 0 00.703-1.497c.14-.604.21-1.267.21-1.973 0-2.566-.704-5.24-2.044-7.303C16.198 5.31 14.483 4.03 12.515 4.03c-.894 0-1.727.302-2.47.834-.717.512-1.36 1.262-1.899 2.244l-.146.267-.146-.267c-.539-.982-1.182-1.732-1.9-2.244-.742-.532-1.575-.834-2.469-.834h-.07zm0 1.9c.602 0 1.163.253 1.715.756.528.48 1.03 1.19 1.469 2.128.478.995.871 2.216 1.152 3.611.209 1.04.345 2.156.394 3.295.015.383.022.721.022.983 0 .293-.005.503-.014.644-.034.483-.102.893-.197 1.222-.143.502-.334.885-.56 1.146-.36.413-.744.618-1.157.618-.585 0-1.174-.36-1.72-1.084-.502-.666-.947-1.626-1.282-2.847-.381-1.385-.594-3.092-.594-4.87 0-1.793.241-3.397.688-4.645.389-1.09.899-1.869 1.458-2.257.328-.228.68-.338 1.046-.338l-.42-.302zm11.2 0c.365 0 .718.11 1.047.338.558.388 1.068 1.168 1.457 2.257.447 1.248.688 2.852.688 4.645 0 1.778-.213 3.485-.594 4.87-.335 1.221-.78 2.181-1.282 2.847-.546.724-1.135 1.084-1.72 1.084-.413 0-.797-.205-1.157-.618-.226-.261-.417-.644-.56-1.146-.095-.329-.163-.739-.197-1.222-.01-.14-.014-.35-.014-.644 0-.262.007-.6.022-.983.05-1.14.185-2.255.394-3.295.281-1.395.674-2.616 1.152-3.61.44-.94.94-1.65 1.469-2.129.552-.503 1.113-.756 1.715-.756l-.42.302z"/>
-  </svg>
-)
-
-const TelegramIcon = () => (
-  <svg className="marquee-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-  </svg>
-)
-
-const marqueeItems: { label: string; type: 'text' | 'icon'; brandColor: string; icon?: React.ReactNode }[] = [
-  { label: 'HUAWEI', type: 'text', brandColor: '#FF0000' },
-  { label: 'ZTE', type: 'text', brandColor: '#0056A2' },
-  { label: 'V-SOL', type: 'text', brandColor: '#FF6600' },
-  { label: 'MikroTik', type: 'text', brandColor: '#293239' },
-  { label: 'PixelPay', type: 'text', brandColor: '#00C853' },
-  { label: 'WhatsApp', type: 'icon', brandColor: '#25D366', icon: <WhatsAppIcon /> },
-  { label: 'Meta', type: 'icon', brandColor: '#0081FB', icon: <MetaIcon /> },
-  { label: 'Telegram', type: 'icon', brandColor: '#26A5E4', icon: <TelegramIcon /> },
-]
+const marqueeItems = ['HUAWEI', 'ZTE', 'V-SOL', 'MikroTik', 'PixelPay', 'WhatsApp', 'Meta', 'Telegram']
 
 export default function Home() {
   return (
@@ -124,18 +97,8 @@ export default function Home() {
         <div className="marquee-label">Integraciones y compatibilidad nativa</div>
         <div className="marquee-track">
           <div className="marquee-inner">
-            {/* Double the items for seamless loop */}
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
-              <div key={i} className="marquee-item" style={{ '--brand-color': item.brandColor } as React.CSSProperties}>
-                {item.type === 'icon' ? (
-                  <>
-                    {item.icon}
-                    <span className="marquee-brand-text">{item.label}</span>
-                  </>
-                ) : (
-                  <span className="marquee-brand-text">{item.label}</span>
-                )}
-              </div>
+              <span key={i} className="marquee-brand">{item}</span>
             ))}
           </div>
         </div>
@@ -235,6 +198,81 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ GIS MAP ═══════════ */}
+      <section className="gis-section">
+        <div className="container">
+          <div className="gis-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div className="section-eyebrow"><span className="eyebrow-icon"><IconMapPin /></span> Red</div>
+            <h2 className="section-title">Tu red, visualizada en tiempo real</h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>
+              Mapa interactivo con la ubicación de cada NAP, OLT, cliente y tramo de fibra. Todo actualizado en vivo.
+            </p>
+          </div>
+          <div className="gis-map animate-on-scroll">
+            <svg className="gis-lines" viewBox="0 0 1000 500" preserveAspectRatio="none">
+              <line className="gis-fiber" x1="150" y1="200" x2="400" y2="120" />
+              <line className="gis-fiber" x1="400" y1="120" x2="650" y2="180" />
+              <line className="gis-fiber" x1="650" y1="180" x2="850" y2="280" />
+              <line className="gis-fiber" x1="400" y1="120" x2="300" y2="350" />
+              <line className="gis-fiber" x1="650" y1="180" x2="750" y2="380" />
+              <line className="gis-fiber" x1="150" y1="200" x2="250" y2="400" />
+              <line className="gis-fiber" x1="850" y1="280" x2="900" y2="420" />
+              <line className="gis-fiber gis-fiber-2" x1="400" y1="120" x2="500" y2="300" />
+              <line className="gis-fiber gis-fiber-2" x1="500" y1="300" x2="650" y2="180" />
+            </svg>
+            {/* OLTs */}
+            <div className="gis-point gis-olt" style={{ left: '15%', top: '40%' }}>
+              <div className="gis-ping" />
+              <div className="gis-dot green" />
+              <div className="gis-tooltip gis-tt-1">OLT-01 Huawei · 128 ONTs</div>
+            </div>
+            <div className="gis-point gis-olt" style={{ left: '40%', top: '24%' }}>
+              <div className="gis-ping" />
+              <div className="gis-dot green" />
+              <div className="gis-tooltip gis-tt-2">OLT-02 ZTE · Señal: -22dBm</div>
+            </div>
+            <div className="gis-point gis-olt" style={{ left: '65%', top: '36%' }}>
+              <div className="gis-ping" />
+              <div className="gis-dot orange" />
+              <div className="gis-tooltip gis-tt-3">OLT-03 · 2 alertas activas</div>
+            </div>
+            <div className="gis-point gis-olt" style={{ left: '85%', top: '56%' }}>
+              <div className="gis-ping" />
+              <div className="gis-dot green" />
+              <div className="gis-tooltip gis-tt-1">OLT-04 V-Sol · 64 ONTs</div>
+            </div>
+            {/* NAPs */}
+            <div className="gis-point" style={{ left: '30%', top: '70%' }}>
+              <div className="gis-ping small" />
+              <div className="gis-dot green small" />
+              <div className="gis-tooltip gis-tt-3">NAP-12 · 24 puertos · 18 activos</div>
+            </div>
+            <div className="gis-point" style={{ left: '50%', top: '60%' }}>
+              <div className="gis-ping small" />
+              <div className="gis-dot green small" />
+            </div>
+            <div className="gis-point" style={{ left: '75%', top: '76%' }}>
+              <div className="gis-ping small" />
+              <div className="gis-dot red small" />
+              <div className="gis-tooltip gis-tt-2">NAP-07 · Sin señal · Revisar</div>
+            </div>
+            <div className="gis-point" style={{ left: '25%', top: '80%' }}>
+              <div className="gis-ping small" />
+              <div className="gis-dot green small" />
+            </div>
+            <div className="gis-point" style={{ left: '90%', top: '84%' }}>
+              <div className="gis-ping small" />
+              <div className="gis-dot green small" />
+            </div>
+            <div className="gis-point" style={{ left: '58%', top: '85%' }}>
+              <div className="gis-ping small" />
+              <div className="gis-dot orange small" />
+              <div className="gis-tooltip gis-tt-1">NAP-19 · 16 puertos · 15 activos</div>
             </div>
           </div>
         </div>
@@ -362,7 +400,7 @@ export default function Home() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="footer-logo">
-                <img src="/logos/4.png" alt="BeFlow Net" style={{ height: 28 }} />
+                <img src="/logos/beflow-logo.png" alt="BeFlow" style={{ height: 28 }} />
               </div>
               <p>BeFlow Net es la plataforma todo-en-uno para proveedores de internet en Honduras y Centroamérica.</p>
             </div>
@@ -389,7 +427,7 @@ export default function Home() {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2026 BeFlow Net. Todos los derechos reservados.</span>
+            <span>© 2026 BeFlow. Todos los derechos reservados.</span>
             <div className="footer-socials">
               <a href="#" className="footer-social" title="WhatsApp">W</a>
               <a href="#" className="footer-social" title="LinkedIn">in</a>
