@@ -366,9 +366,29 @@ img { max-width: 100%; }
   box-shadow: var(--shadow-lg), 0 0 60px rgba(255,49,49,0.08);
   background: #0B1120;
 }
-/* Dark map background */
+/* Dark map background with SVG streets */
 .nmap-bg {
-  position: absolute; inset: 0; z-index: 0; overflow: hidden;
+  position: absolute; inset: 0; z-index: 0; background: #0F172A;
+}
+.nmap-streets {
+  width: 100%; height: 100%;
+}
+.nmap-road {
+  fill: none; stroke: rgba(255,255,255,0.05); stroke-width: 0.3;
+}
+.nmap-road.major {
+  stroke: rgba(255,255,255,0.08); stroke-width: 0.5;
+}
+.nmap-road.minor {
+  stroke: rgba(255,255,255,0.03); stroke-width: 0.25;
+}
+.nmap-river {
+  fill: none; stroke: rgba(56,189,248,0.08); stroke-width: 0.8;
+}
+.nmap-label {
+  position: absolute; transform: translate(-50%, -50%);
+  color: white; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; pointer-events: none; white-space: nowrap;
 }
 /* Fiber lines */
 .nmap-fibers {
