@@ -16,21 +16,21 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'BeFlow Net — La Plataforma Inteligente para ISPs',
-  description: 'Gestiona clientes, cobros, red de fibra, OLTs y más. Todo en una sola plataforma diseñada para proveedores de internet en Honduras y Centroamérica.',
-  keywords: ['ISP', 'gestión ISP', 'Honduras', 'fibra óptica', 'OLT', 'MikroTik', 'proveedor internet'],
+  title: 'BeFlow — Software que resuelve problemas reales',
+  description: 'BeFlow crea productos de tecnologia especializados para industrias clave en Honduras y Centroamerica. Desde gestion ISP hasta infraestructura fiscal.',
+  keywords: ['BeFlow', 'tecnologia', 'Honduras', 'ISP', 'facturacion electronica', 'Mint', 'developer tools'],
   openGraph: {
-    title: 'BeFlow Net — La Plataforma Inteligente para ISPs',
-    description: 'Gestiona clientes, cobros, red de fibra, OLTs y más. Diseñada para ISPs en Centroamérica.',
+    title: 'BeFlow — Software que resuelve problemas reales',
+    description: 'Productos de tecnologia especializados para industrias clave en Honduras y Centroamerica.',
     url: 'https://justbeflow.com',
-    siteName: 'BeFlow Net',
+    siteName: 'BeFlow',
     locale: 'es_HN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BeFlow Net — La Plataforma Inteligente para ISPs',
-    description: 'Gestiona clientes, cobros, red de fibra, OLTs y más.',
+    title: 'BeFlow — Software que resuelve problemas reales',
+    description: 'Productos de tecnologia especializados para Honduras y Centroamerica.',
   },
 }
 

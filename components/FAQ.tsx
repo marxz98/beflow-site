@@ -5,28 +5,28 @@ import { IconQuestion } from '@/components/Icons'
 
 const faqs = [
   {
-    q: '¿Puedo migrar mis datos desde WispHub, Splynx o AppSheet?',
-    a: 'Sí. Aceptamos importación desde cualquier fuente que exporte a Excel o CSV. Nuestro equipo te acompaña en el proceso de migración para asegurar que toda tu información (clientes, servicios, cobros, pagos) se transfiera correctamente.',
+    q: 'Que es BeFlow exactamente?',
+    a: 'BeFlow es una empresa de tecnologia hondurena que crea productos de software especializados. Nuestro primer producto, BeFlow Net, es una plataforma de gestion para proveedores de internet (ISPs). Tambien estamos desarrollando Mint, una API de facturacion electronica, y herramientas para developers.',
   },
   {
-    q: '¿Qué marcas de OLT son compatibles?',
-    a: 'BeFlow Bridge soporta nativamente OLTs de Huawei (serie MA56xx), ZTE (C320, C300) y V-Sol. También integramos routers MikroTik vía API para gestión de queues, firewall y corte/reconexión automática.',
+    q: 'Que es BeFlow Net y para quien es?',
+    a: 'BeFlow Net es una plataforma todo-en-uno para ISPs (proveedores de internet) en Honduras y Centroamerica. Incluye gestion de clientes, cobros, red de fibra, OLTs, ordenes de trabajo, facturacion SAR/CAI e inteligencia artificial. Esta disenada para ISPs pequenos y medianos que quieren profesionalizar su operacion.',
   },
   {
-    q: '¿Cómo funciona la facturación SAR/CAI?',
-    a: 'BeFlow Net genera facturas con el formato fiscal requerido por el SAR de Honduras, incluyendo CAI, rango autorizado, fecha límite de emisión y todos los datos fiscales. Tú solo configuras tus datos una vez y el sistema se encarga del resto.',
+    q: 'Que es Mint by BeFlow?',
+    a: 'Mint es una API REST de facturacion electronica para Honduras. Permite a developers y empresas generar, validar, firmar digitalmente (XAdES-BES) y entregar documentos fiscales electronicos cumpliendo con los requisitos del SAR. Envias un JSON, recibes XML firmado + PDF listo. Incluye SDKs en 5 lenguajes.',
   },
   {
-    q: '¿Puedo tener mi propio número de WhatsApp para notificaciones?',
-    a: 'Sí. Cada ISP recibe su propio WABA (WhatsApp Business Account) con número dedicado. Tus clientes reciben notificaciones con el nombre y logo de tu ISP, no de BeFlow Net.',
+    q: 'Puedo migrar mis datos desde WispHub, Splynx o AppSheet a BeFlow Net?',
+    a: 'Si. Aceptamos importacion desde cualquier fuente que exporte a Excel o CSV. Nuestro equipo te acompana en el proceso de migracion para asegurar que toda tu informacion (clientes, servicios, cobros, pagos) se transfiera correctamente.',
   },
   {
-    q: '¿Hay un período de prueba?',
-    a: 'Sí. Ofrecemos una prueba guiada donde configuramos tu operación con datos reales para que puedas evaluar la plataforma antes de comprometerte. Agenda una demo y te mostramos todo el potencial de BeFlow Net con tu propia información.',
+    q: 'Que marcas de OLT son compatibles con BeFlow Net?',
+    a: 'BeFlow Bridge soporta nativamente OLTs de Huawei (serie MA56xx), ZTE (C320, C300) y V-Sol. Tambien integramos routers MikroTik via API para gestion de queues, firewall y corte/reconexion automatica.',
   },
   {
-    q: '¿Es más barato que Splynx o WispHub?',
-    a: 'Significativamente. BeFlow Net está diseñado para el mercado centroamericano con precios acordes. Un ISP con 2,000 clientes paga ~$400/mes con el plan Pro, mientras que soluciones comparables pueden costar 2-3x más sin incluir las integraciones Honduras-específicas que BeFlow Net ya trae de serie.',
+    q: 'Las herramientas de Dev Tools son gratuitas?',
+    a: 'Si. Nuestras herramientas developer como Envradar para VSCode son open source y gratuitas. Las publicamos en GitHub y el marketplace de VSCode. Si te son utiles, una estrella en GitHub es suficiente.',
   },
 ]
 
