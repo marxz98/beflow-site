@@ -17,20 +17,14 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: 'BeFlow — Software que resuelve problemas reales',
-  description: 'BeFlow crea productos de tecnologia especializados para industrias clave en Honduras y Centroamerica. Desde gestion ISP hasta infraestructura fiscal.',
-  keywords: ['BeFlow', 'tecnologia', 'Honduras', 'ISP', 'facturacion electronica', 'Mint', 'developer tools'],
+  description: 'BeFlow crea productos de tecnologia especializados para Honduras y Centroamerica. BeFlow Net, Mint, EnvRadar.',
   openGraph: {
     title: 'BeFlow — Software que resuelve problemas reales',
-    description: 'Productos de tecnologia especializados para industrias clave en Honduras y Centroamerica.',
+    description: 'Productos de tecnologia especializados para Honduras y Centroamerica.',
     url: 'https://justbeflow.com',
     siteName: 'BeFlow',
     locale: 'es_HN',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'BeFlow — Software que resuelve problemas reales',
-    description: 'Productos de tecnologia especializados para Honduras y Centroamerica.',
   },
 }
 
