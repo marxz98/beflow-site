@@ -15,7 +15,7 @@ export function ScrollAnimator() {
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     )
 
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+    document.querySelectorAll('.anim-on-scroll').forEach((el) => {
       observer.observe(el)
     })
 

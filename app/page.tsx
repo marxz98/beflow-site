@@ -1,13 +1,15 @@
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { CodeTabs } from '@/components/CodeTabs'
 import { ScrollAnimator } from '@/components/ScrollAnimator'
-import { IconCheck, IconGlobe, IconShield, IconTerminal, IconUsers, IconCurrency, IconBolt, IconTicket, IconDiamond, IconArrowRight, IconCode, IconSearch, IconEye } from '@/components/Icons'
 
 const Arrow = () => (
-  <svg className="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none">
     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
+
+const marqueeItems = ['Huawei', 'ZTE', 'V-Sol', 'MikroTik', 'PixelPay', 'WhatsApp', 'Meta', 'Telegram', 'Node.js', 'XAdES-BES']
 
 export default function Home() {
   return (
@@ -15,247 +17,206 @@ export default function Home() {
       <ScrollAnimator />
       <Navbar />
 
-      {/* HERO */}
+      {/* ── HERO ── */}
       <section className="hero">
+        <div className="hero-glow" />
         <div className="container">
-          <div className="hero-badge">
-            <span className="badge-dot" />
-            Empresa de tecnologia &middot; Honduras
+          <div className="hero-badge hero-anim hero-anim-1">
+            <span className="dot" />
+            Productos en produccion &middot; Honduras
           </div>
-          <h1>
-            Software que resuelve<br />
-            <span className="gradient-text">problemas reales</span>
+          <h1 className="hero-anim hero-anim-2">
+            Productos de tecnologia<br />
+            <span className="grad">hechos en Honduras</span>
           </h1>
-          <p className="hero-sub">
-            BeFlow crea productos de tecnologia especializados para Honduras y Centroamerica. Desde gestion ISP hasta infraestructura fiscal y herramientas para developers.
+          <p className="hero-sub hero-anim hero-anim-3">
+            Construimos y operamos software especializado para telecomunicaciones, infraestructura fiscal y desarrollo.
           </p>
-          <div className="hero-ctas">
-            <a href="#productos" className="btn btn-accent btn-accent-lg">
-              Explorar Productos <Arrow />
+          <div className="hero-ctas hero-anim hero-anim-4">
+            <a href="#productos" className="btn btn-gradient btn-lg">
+              Explorar productos <Arrow />
             </a>
-            <a href="#developers" className="btn btn-outline" style={{ padding: '14px 32px', fontSize: '15.5px', borderRadius: 12 }}>
-              Para Developers
+            <a href="#developers" className="btn btn-outline btn-lg">
+              Para developers
             </a>
           </div>
         </div>
       </section>
 
-      {/* PRODUCTS */}
-      <section className="products-section" id="productos">
-        <div className="container">
-          <div className="products-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 56 }}>
-            <div className="section-eyebrow">
-              <span className="eyebrow-icon"><IconDiamond /></span> Productos
-            </div>
-            <h2 className="section-title">Nuestros Productos</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Cada producto nace de un problema real en una industria que conocemos a fondo.
-            </p>
-          </div>
-
-          <div className="landing-products-grid">
-            {/* BeFlow Net */}
-            <div className="lp-card animate-on-scroll">
-              <div className="lp-card-inner">
-                <div className="lp-badge production"><span className="badge-dot-sm" /> En produccion</div>
-                <div className="lp-logo-icon" style={{ background: 'linear-gradient(135deg, #FF3131, #FF914D)' }}>
-                  <IconGlobe />
-                </div>
-                <h3 className="lp-name">BeFlow Net</h3>
-                <p className="lp-tagline">La plataforma todo-en-uno para proveedores de internet</p>
-                <p className="lp-desc">Gestion de clientes, cobros, red de fibra, OLTs, ordenes de trabajo e inteligencia artificial. Disenada para ISPs en Centroamerica.</p>
-                <div className="lp-features">
-                  <span><IconCheck /> Gestion ISP completa</span>
-                  <span><IconCheck /> Red visual GIS</span>
-                  <span><IconCheck /> IA integrada</span>
-                </div>
-                <div className="lp-visual">
-                  <div className="pv-grid">
-                    <div className="pv-card">
-                      <div className="pv-card-icon" style={{ background: 'rgba(255,49,49,0.15)', color: '#FF6B6B' }}><IconUsers /></div>
-                      <div className="pv-card-title">Clientes Activos</div>
-                      <div className="pv-card-value">1,847</div>
-                    </div>
-                    <div className="pv-card">
-                      <div className="pv-card-icon" style={{ background: 'rgba(16,185,129,0.15)', color: '#34D399' }}><IconCurrency /></div>
-                      <div className="pv-card-title">Ingresos Mes</div>
-                      <div className="pv-card-value">L 842K</div>
-                    </div>
-                    <div className="pv-card">
-                      <div className="pv-card-icon" style={{ background: 'rgba(245,158,11,0.15)', color: '#FBBF24' }}><IconBolt /></div>
-                      <div className="pv-card-title">OLTs Activos</div>
-                      <div className="pv-card-value">8</div>
-                    </div>
-                    <div className="pv-card">
-                      <div className="pv-card-icon" style={{ background: 'rgba(255,145,77,0.15)', color: '#FFAA6B' }}><IconTicket /></div>
-                      <div className="pv-card-title">Ordenes Hoy</div>
-                      <div className="pv-card-value">12</div>
-                    </div>
-                  </div>
-                </div>
-                <a href="/net" className="btn btn-accent lp-cta">Conocer BeFlow Net <Arrow /></a>
-              </div>
-            </div>
-
-            {/* Mint */}
-            <div className="lp-card animate-on-scroll">
-              <div className="lp-card-inner">
-                <div className="lp-badge production" style={{ background: 'var(--green-light)', color: 'var(--green)' }}><span className="badge-dot-sm" /> API Live</div>
-                <div className="lp-logo-icon" style={{ background: 'linear-gradient(135deg, #10B981, #34D399)' }}>
-                  <IconShield />
-                </div>
-                <h3 className="lp-name">Mint</h3>
-                <p className="lp-tagline">Infraestructura fiscal para facturacion electronica</p>
-                <p className="lp-desc">API REST para generar, validar y firmar documentos fiscales electronicos cumpliendo con el SAR. Envias un JSON, recibis PDF firmado.</p>
-                <div className="lp-features">
-                  <span><IconCheck /> 36 endpoints REST</span>
-                  <span><IconCheck /> 5 SDKs oficiales</span>
-                  <span><IconCheck /> Firma digital XAdES-BES</span>
-                </div>
-                <div className="lp-visual">
-                  <div className="lp-terminal">
-                    <div className="lp-term-line"><span className="t-method">POST</span> <span className="t-url">/api/v1/invoices</span></div>
-                    <div className="lp-term-line t-muted">Content-Type: application/json</div>
-                    <div className="lp-term-divider" />
-                    <div className="lp-term-line"><span className="t-response">201</span> invoice_number: <span className="t-val">&quot;001-001-01-00000001&quot;</span></div>
-                    <div className="lp-term-line">status: <span className="t-val">&quot;signed&quot;</span> &middot; pdf_url: <span className="t-val">&quot;/docs/INV-001.pdf&quot;</span></div>
-                  </div>
-                </div>
-                <a href="/mint" className="btn btn-mint lp-cta">Explorar Mint <Arrow /></a>
-              </div>
-            </div>
-
-            {/* EnvRadar */}
-            <div className="lp-card animate-on-scroll">
-              <div className="lp-card-inner">
-                <div className="lp-badge" style={{ background: '#DBEAFE', color: '#3B82F6' }}><span className="badge-dot-sm" /> Open Source</div>
-                <div className="lp-logo-icon" style={{ background: 'linear-gradient(135deg, #3B82F6, #60A5FA)' }}>
-                  <IconSearch />
-                </div>
-                <h3 className="lp-name">EnvRadar</h3>
-                <p className="lp-tagline">Protege tus variables de entorno en VS Code</p>
-                <p className="lp-desc">Detecta variables faltantes, secrets expuestos y errores de tipo en tus archivos .env. Offline, gratis, open source.</p>
-                <div className="lp-features">
-                  <span><IconCheck /> Secret Scanner</span>
-                  <span><IconCheck /> Diff visual</span>
-                  <span><IconCheck /> 15+ lenguajes</span>
-                </div>
-                <div className="lp-visual">
-                  <div className="lp-env-preview">
-                    <div className="lp-env-row"><span className="env-key">DATABASE_URL</span><span className="env-eq">=</span><span className="env-val">postgresql://...</span><span className="env-dot ok" /></div>
-                    <div className="lp-env-row"><span className="env-key">API_SECRET</span><span className="env-eq">=</span><span className="env-val">sk_live_xxx...</span><span className="env-dot ok" /></div>
-                    <div className="lp-env-row"><span className="env-key">STRIPE_KEY</span><span className="env-eq">=</span><span className="env-val missing">no definida</span><span className="env-dot warn" /></div>
-                  </div>
-                </div>
-                <a href="/envradar" className="btn btn-blue lp-cta">Ver EnvRadar <Arrow /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* METRICS */}
-      <section className="metrics-section">
-        <div className="container">
-          <div className="metrics-grid">
-            {[
-              { value: '3', label: 'Productos en produccion' },
-              { value: '374K+', label: 'Empresas potenciales en Honduras' },
-              { value: '36+', label: 'Endpoints API en Mint' },
-              { value: '23 KB', label: 'EnvRadar. Sin bloat.' },
-            ].map((m) => (
-              <div key={m.value} className="metric animate-on-scroll">
-                <div className="metric-value">{m.value}</div>
-                <div className="metric-label">{m.label}</div>
-              </div>
+      {/* ── MARQUEE ── */}
+      <section className="marquee-section">
+        <div className="marquee-label">Tecnologias con las que trabajamos</div>
+        <div className="marquee-track">
+          <div className="marquee-inner">
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
+              <span key={i} className="marquee-brand">{item}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="about-section" id="nosotros">
+      {/* ── PRODUCTS BENTO ── */}
+      <section className="products-section" id="productos">
         <div className="container">
-          <div className="about-grid">
-            <div className="about-content animate-on-scroll">
-              <div className="section-eyebrow"><span className="eyebrow-icon"><IconArrowRight /></span> Nosotros</div>
-              <h2 className="section-title">Tecnologia hecha en Honduras,<br/>para Centroamerica</h2>
-              <p className="section-subtitle">
-                BeFlow es una empresa de tecnologia hondurena. Creamos software especializado para industrias que conocemos a fondo: telecomunicaciones, comercio y desarrollo de software.
-              </p>
-              <p className="section-subtitle" style={{ marginTop: 16 }}>
-                No somos una agencia. No hacemos sitios web. Construimos productos propios que resuelven problemas reales y los operamos como SaaS.
-              </p>
+          <div className="section-center anim-on-scroll">
+            <div className="section-title">Nuestros productos</div>
+            <p className="section-sub">Cada uno nace de un problema real en una industria que conocemos a fondo.</p>
+          </div>
+
+          <div className="bento-grid">
+            {/* BeFlow Net */}
+            <div className="bento-card anim-on-scroll">
+              <div className="bc-badge green"><span className="dot" /> En produccion</div>
+              <div className="bc-name">BeFlow Net</div>
+              <div className="bc-tagline">Plataforma todo-en-uno para proveedores de internet</div>
+              <div className="bc-pills">
+                <span className="bc-pill">Gestion ISP</span>
+                <span className="bc-pill">Red GIS</span>
+                <span className="bc-pill">IA integrada</span>
+                <span className="bc-pill">SAR/CAI</span>
+              </div>
+              <a href="/net" className="bc-link red">Conocer BeFlow Net <span className="bc-link-arrow">&rarr;</span></a>
+              <div className="bc-visual">
+                <div className="bc-stats-grid">
+                  {[
+                    { label: 'Clientes', value: '1,847', pct: 92 },
+                    { label: 'Ingresos', value: 'L 842K', pct: 78 },
+                    { label: 'Cobro', value: '94.2%', pct: 94 },
+                    { label: 'OLTs', value: '8', pct: 100 },
+                  ].map((s) => (
+                    <div key={s.label} className="bc-stat">
+                      <div className="bc-stat-label">{s.label}</div>
+                      <div className="bc-stat-value">{s.value}</div>
+                      <div className="bc-stat-bar"><div className="bc-stat-bar-fill" style={{ width: `${s.pct}%` }} /></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="about-stats animate-on-scroll">
-              <div className="about-stat">
-                <div className="about-stat-value">3</div>
-                <div className="about-stat-label">Productos activos</div>
+
+            {/* Mint */}
+            <div className="bento-card mint anim-on-scroll">
+              <div className="bc-badge green"><span className="dot" /> API Live</div>
+              <div className="bc-name">Mint</div>
+              <div className="bc-tagline">Infraestructura fiscal para facturacion electronica</div>
+              <div className="bc-pills">
+                <span className="bc-pill">36 endpoints</span>
+                <span className="bc-pill">5 SDKs</span>
+                <span className="bc-pill">XAdES-BES</span>
+                <span className="bc-pill">Modo offline</span>
               </div>
-              <div className="about-stat">
-                <div className="about-stat-value">2026</div>
-                <div className="about-stat-label">Fundacion</div>
+              <a href="/mint" className="bc-link green">Explorar Mint <span className="bc-link-arrow">&rarr;</span></a>
+              <div className="bc-terminal">
+                <div className="bc-term-header">
+                  <span className="bc-term-dot r" />
+                  <span className="bc-term-dot y" />
+                  <span className="bc-term-dot g" />
+                </div>
+                <div className="bc-term-body">
+                  <div><span className="t-method">POST</span> <span className="t-str">/api/v1/invoices</span></div>
+                  <div><span className="t-op">{'{'}</span></div>
+                  <div>&nbsp;&nbsp;<span className="t-key">&quot;receiver&quot;</span><span className="t-op">:</span> <span className="t-op">{'{'}</span> <span className="t-key">&quot;rtn&quot;</span><span className="t-op">:</span> <span className="t-str">&quot;0801199912345&quot;</span> <span className="t-op">{'}'}</span><span className="t-op">,</span></div>
+                  <div>&nbsp;&nbsp;<span className="t-key">&quot;items&quot;</span><span className="t-op">:</span> <span className="t-op">[{'{'}</span> <span className="t-key">&quot;amount&quot;</span><span className="t-op">:</span> <span className="t-num">1500.00</span> <span className="t-op">{'}]'}</span></div>
+                  <div><span className="t-op">{'}'}</span></div>
+                  <div style={{ marginTop: 8, borderTop: '1px solid rgba(255,255,255,0.04)', paddingTop: 8 }}>
+                    <span className="t-response">201</span> <span className="t-op">{'{'}</span> <span className="t-key">&quot;status&quot;</span><span className="t-op">:</span> <span className="t-str">&quot;signed&quot;</span><span className="t-op">,</span> <span className="t-key">&quot;pdf&quot;</span><span className="t-op">:</span> <span className="t-str">&quot;INV-001.pdf&quot;</span> <span className="t-op">{'}'}</span>
+                  </div>
+                </div>
               </div>
-              <div className="about-stat">
-                <div className="about-stat-value">HN</div>
-                <div className="about-stat-label">Tegucigalpa, Honduras</div>
+            </div>
+
+            {/* EnvRadar */}
+            <div className="bento-card full envradar anim-on-scroll">
+              <div>
+                <div className="bc-badge blue"><span className="dot" /> Open Source</div>
+                <div className="bc-name">EnvRadar</div>
+                <div className="bc-tagline">Stop shipping broken environments.</div>
+                <div className="bc-pills">
+                  <span className="bc-pill">Secret scanner</span>
+                  <span className="bc-pill">Diff visual</span>
+                  <span className="bc-pill">15+ lenguajes</span>
+                  <span className="bc-pill">23 KB</span>
+                  <span className="bc-pill">MIT</span>
+                </div>
+                <a href="/envradar" className="bc-link blue">Install from Marketplace <span className="bc-link-arrow">&rarr;</span></a>
               </div>
-              <div className="about-stat">
-                <div className="about-stat-value">100%</div>
-                <div className="about-stat-label">Productos propios</div>
+              <div className="bc-vscode">
+                <div className="bc-vscode-header">
+                  <span className="bc-term-dot r" />
+                  <span className="bc-term-dot y" />
+                  <span className="bc-term-dot g" />
+                  <span style={{ fontSize: 11, color: 'var(--text-tertiary)', marginLeft: 10 }}>EnvRadar &mdash; .env</span>
+                </div>
+                <div className="bc-vscode-body">
+                  <div className="env-row ok"><span className="env-dot ok" /><span className="env-name">DATABASE_URL</span><span className="env-val">postgresql://user:***@host:5432/app</span></div>
+                  <div className="env-row ok"><span className="env-dot ok" /><span className="env-name">PORT</span><span className="env-val">3000</span></div>
+                  <div className="env-row ok"><span className="env-dot ok" /><span className="env-name">NODE_ENV</span><span className="env-val">production</span></div>
+                  <div className="env-row warn"><span className="env-dot warn" /><span className="env-name">API_SECRET</span><span className="env-warn-text">Hardcoded secret detected</span></div>
+                  <div className="env-row err"><span className="env-dot err" /><span className="env-name">REDIS_URL</span><span className="env-err-text">Missing in .env</span></div>
+                  <div className="env-row err"><span className="env-dot err" /><span className="env-name">SMTP_HOST</span><span className="env-err-text">Defined but unused</span></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* DEVELOPERS */}
+      {/* ── DEVELOPERS ── */}
       <section className="dev-section" id="developers">
         <div className="container">
-          <div className="dev-header animate-on-scroll" style={{ textAlign: 'center', marginBottom: 56 }}>
-            <div className="section-eyebrow" style={{ color: '#A78BFA' }}><span className="eyebrow-icon" style={{ background: 'rgba(124,58,237,0.15)' }}><IconCode /></span> Developers</div>
-            <h2 className="section-title" style={{ color: 'white' }}>Hecho para developers</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto', color: 'rgba(255,255,255,0.5)' }}>
-              APIs documentadas, SDKs en tu lenguaje favorito y herramientas open-source.
-            </p>
-          </div>
           <div className="dev-grid">
-            <div className="dev-card animate-on-scroll">
-              <div className="dev-card-icon" style={{ background: 'rgba(16,185,129,0.15)', color: '#34D399' }}><IconShield /></div>
-              <h3>Mint API</h3>
-              <p>36 endpoints REST para facturacion electronica. SDKs en Node.js, PHP, Java, Python y C#.</p>
-              <a href="/mint" className="dev-card-link">Ver documentacion &rarr;</a>
+            <div className="anim-on-scroll">
+              <div className="section-label dev-label">Developers</div>
+              <div className="dev-title">Hecho para developers</div>
+              <p className="dev-desc">APIs robustas, SDKs en tu lenguaje, documentacion completa. Integracion en minutos, no semanas.</p>
+              <div className="dev-btns">
+                <a href="/mint#docs" className="btn btn-gradient">Documentacion <Arrow /></a>
+                <a href="#" className="btn btn-outline">Swagger API</a>
+              </div>
             </div>
-            <div className="dev-card animate-on-scroll">
-              <div className="dev-card-icon" style={{ background: 'rgba(59,130,246,0.15)', color: '#60A5FA' }}><IconSearch /></div>
-              <h3>EnvRadar</h3>
-              <p>Extension de VSCode para proteger tus variables de entorno. Open source.</p>
-              <a href="/envradar" className="dev-card-link">Ver extension &rarr;</a>
-            </div>
-            <div className="dev-card animate-on-scroll">
-              <div className="dev-card-icon" style={{ background: 'rgba(255,49,49,0.15)', color: '#FF6B6B' }}><IconTerminal /></div>
-              <h3>Documentacion</h3>
-              <p>Guias, referencias de API y ejemplos de integracion para todos nuestros productos.</p>
-              <a href="/mint#docs" className="dev-card-link">Explorar docs &rarr;</a>
+            <div className="anim-on-scroll">
+              <CodeTabs />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta-section" id="contacto">
+      {/* ── METRICS ── */}
+      <section className="metrics-section" id="metricas">
         <div className="container">
-          <div className="cta-card animate-on-scroll">
-            <h2>El software que Honduras necesita,<br />hecho en Honduras</h2>
-            <p>Desde gestion ISP hasta infraestructura fiscal y herramientas open source.</p>
-            <div className="cta-btns">
-              <a href="mailto:hello@justbeflow.com" className="btn btn-accent btn-accent-lg">
-                Contactar <Arrow />
-              </a>
-              <a href="#productos" className="btn" style={{ color: 'rgba(255,255,255,0.6)', border: '1.5px solid rgba(255,255,255,0.15)', padding: '14px 32px', borderRadius: 12, fontSize: '15.5px' }}>
-                Ver Productos
-              </a>
+          <div className="metrics-grid anim-on-scroll">
+            <div className="metric">
+              <div className="metric-value">3</div>
+              <div className="metric-label">Productos en produccion</div>
             </div>
+            <span className="metric-divider" />
+            <div className="metric">
+              <div className="metric-value">374K+</div>
+              <div className="metric-label">Empresas en Honduras</div>
+            </div>
+            <span className="metric-divider" />
+            <div className="metric">
+              <div className="metric-value">36</div>
+              <div className="metric-label">Endpoints API</div>
+            </div>
+            <span className="metric-divider" />
+            <div className="metric">
+              <div className="metric-value">23 KB</div>
+              <div className="metric-label">EnvRadar. Zero bloat.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="cta-section" id="contacto">
+        <div className="cta-glow" />
+        <div className="container">
+          <div className="cta-title anim-on-scroll">Hecho en Honduras.<br />Para el mundo.</div>
+          <p className="cta-sub anim-on-scroll">El software que las industrias necesitan.</p>
+          <div className="cta-btns anim-on-scroll">
+            <a href="mailto:hello@justbeflow.com" className="btn btn-gradient btn-lg">Comenzar ahora <Arrow /></a>
+            <a href="mailto:hello@justbeflow.com" className="btn btn-outline btn-lg">Contactar equipo</a>
           </div>
         </div>
       </section>

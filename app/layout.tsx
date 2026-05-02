@@ -16,11 +16,11 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'BeFlow — Software que resuelve problemas reales',
-  description: 'BeFlow crea productos de tecnologia especializados para Honduras y Centroamerica. BeFlow Net, Mint, EnvRadar.',
+  title: 'BeFlow - Productos de tecnologia hechos en Honduras',
+  description: 'Construimos y operamos software especializado para telecomunicaciones, infraestructura fiscal y desarrollo. BeFlow Net, Mint, EnvRadar.',
   openGraph: {
-    title: 'BeFlow — Software que resuelve problemas reales',
-    description: 'Productos de tecnologia especializados para Honduras y Centroamerica.',
+    title: 'BeFlow - Productos de tecnologia hechos en Honduras',
+    description: 'Software especializado para telecomunicaciones, infraestructura fiscal y desarrollo.',
     url: 'https://justbeflow.com',
     siteName: 'BeFlow',
     locale: 'es_HN',
@@ -28,11 +28,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${dmSans.variable} ${spaceMono.variable}`}>
       <body>{children}</body>

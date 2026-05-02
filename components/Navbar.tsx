@@ -15,42 +15,33 @@ export function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <a href="#" className="nav-logo">
-          <img src="/logos/3.png" alt="BeFlow" style={{ height: 32 }} />
+        <a href="/" className="nav-logo">
+          <img src="/logos/3.png" alt="BeFlow" />
         </a>
-        <div className="nav-links hide-mobile">
+        <div className="nav-links">
           <a href="#productos">Productos</a>
-          <a href="#nosotros">Nosotros</a>
           <a href="#developers">Developers</a>
-          <a href="#precios">Precios</a>
+          <a href="#metricas">Precios</a>
         </div>
-        <div className="nav-cta hide-mobile">
-          <a href="https://net.justbeflow.com" className="btn btn-outline">Iniciar Sesion</a>
-          <a href="#contacto" className="btn btn-primary">
+        <div className="nav-cta">
+          <a href="https://net.justbeflow.com" className="btn btn-outline" style={{ padding: '8px 18px', fontSize: '13px' }}>
+            Iniciar sesion
+          </a>
+          <a href="#contacto" className="btn btn-outline" style={{ padding: '8px 18px', fontSize: '13px', borderColor: 'rgba(255,255,255,0.1)' }}>
             Contactar
-            <svg className="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
           </a>
         </div>
-        <button
-          className="mobile-menu-btn hide-desktop"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menu"
-        >
+        <button className="mobile-menu-btn" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
           <span className={`hamburger ${mobileOpen ? 'open' : ''}`} />
         </button>
       </div>
       {mobileOpen && (
         <div className="mobile-menu">
           <a href="#productos" onClick={() => setMobileOpen(false)}>Productos</a>
-          <a href="#nosotros" onClick={() => setMobileOpen(false)}>Nosotros</a>
           <a href="#developers" onClick={() => setMobileOpen(false)}>Developers</a>
-          <a href="#precios" onClick={() => setMobileOpen(false)}>Precios</a>
-          <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: 16, marginTop: 8, display: 'flex', flexDirection: 'column', gap: 10 }}>
-            <a href="https://net.justbeflow.com" className="btn btn-outline" style={{ justifyContent: 'center' }}>Iniciar Sesion</a>
-            <a href="#contacto" className="btn btn-accent" style={{ justifyContent: 'center' }} onClick={() => setMobileOpen(false)}>Contactar</a>
-          </div>
+          <a href="#metricas" onClick={() => setMobileOpen(false)}>Precios</a>
+          <a href="https://net.justbeflow.com" onClick={() => setMobileOpen(false)}>Iniciar sesion</a>
+          <a href="#contacto" onClick={() => setMobileOpen(false)} style={{ color: 'var(--accent-1)' }}>Contactar</a>
         </div>
       )}
     </nav>
