@@ -405,6 +405,64 @@ img { max-width: 100%; display: block; }
 .anim-on-scroll { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .anim-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
+/* ══════════ SKELETON SHIMMER ══════════ */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.skeleton-shimmer {
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.07) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+
+/* ══════════ BREADCRUMB ══════════ */
+.breadcrumb-inline {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: rgba(255,255,255,0.28);
+  margin-bottom: 24px;
+}
+.breadcrumb-inline a { color: rgba(255,255,255,0.28); transition: color 0.2s; }
+.breadcrumb-inline a:hover { color: rgba(255,255,255,0.6); }
+.breadcrumb-inline .bc-sep { color: rgba(255,255,255,0.14); }
+
+/* Product hero has less top padding to accommodate breadcrumb */
+.hero-product { padding-top: calc(var(--nav-h) + 48px); }
+
+/* ══════════ RELATED PRODUCTS ══════════ */
+.related-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+}
+.related-label {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 2px; color: rgba(255,255,255,0.25); margin-bottom: 28px;
+}
+.related-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.related-card {
+  display: flex; flex-direction: column; gap: 8px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px 28px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.related-card:hover {
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+.related-name { font-size: 16px; font-weight: 600; color: white; }
+.related-desc { font-size: 14px; color: rgba(255,255,255,0.38); line-height: 1.5; flex: 1; }
+.related-link { font-size: 13px; font-weight: 600; color: var(--accent-1); margin-top: 4px; }
+.related-card.mint  .related-link { color: var(--green); }
+.related-card.enr   .related-link { color: var(--blue); }
+.related-card.net   .related-link { color: var(--accent-1); }
+
 /* ══════════ RESPONSIVE ══════════ */
 @media (max-width: 1024px) {
   .bento-grid { grid-template-columns: 1fr; }
@@ -429,6 +487,7 @@ img { max-width: 100%; display: block; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .dev-btns { flex-wrap: wrap; }
+  .related-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
   .metrics-grid { grid-template-columns: 1fr; }

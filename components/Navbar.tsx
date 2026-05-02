@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [logoLoaded, setLogoLoaded] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -15,8 +16,19 @@ export function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <a href="/" className="nav-logo">
-          <img src="/logos/3.png" alt="BeFlow" />
+        <a href="/" className="nav-logo" style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+          {!logoLoaded && (
+            <div
+              className="skeleton-shimmer"
+              style={{ width: 90, height: 28, borderRadius: 6 }}
+            />
+          )}
+          <img
+            src="/logos/3.png"
+            alt="BeFlow"
+            onLoad={() => setLogoLoaded(true)}
+            style={{ display: logoLoaded ? 'block' : 'none' }}
+          />
         </a>
         <div className="nav-links">
           <a href="#productos">Productos</a>
